@@ -107,6 +107,93 @@
             color: var(--gray);
             font-size: 0.9rem;
         }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 0.5rem;
+            }
+
+            nav button {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                margin: 20px 0 10px;
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .sample-card {
+                padding: 12px;
+            }
+
+            input, textarea {
+                font-size: 16px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                gap: 5px;
+            }
+
+            nav button {
+                padding: 6px 8px;
+                font-size: 0.8rem;
+            }
+
+            .container {
+                margin: 10px auto;
+                padding: 12px;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            .btn-download {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
