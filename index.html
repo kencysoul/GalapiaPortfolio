@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Student OJT Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: var(--dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav button:hover, nav button.active {
+            background: var(--primary);
+        }
+
+        /* Content Sections */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Specific Styles */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 4px solid var(--primary);
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .sample-card {
+            border-left: 5px solid var(--primary);
+            background: #f1f5f9;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav id="mainNav">
+    <button onclick="showTab('home')" class="active">Home</button>
+    <button onclick="showTab('about')">About Me</button>
+    <button onclick="showTab('internship')">Internship</button>
+    <button onclick="showTab('samples')">Sample Works</button>
+    <button onclick="showTab('contact')">Contact</button>
+</nav>
+
+<div class="container">
+    
+    <section id="home" class="tab-content active">
+        <div style="text-align: center;">
+            <div class="profile-img">
+                <img src="images\john_kenneth_galapia_d_sc.jpg" alt="" height="100%">
+            </div>
+            <h1>John Kenneth Galapia</h1>
+            <p style="font-size: 1.2rem; color: var(--gray);">BS in Information Technology | 4th Year</p>
+            <p>Welcome to my official OJT Portfolio. This site showcases my journey and technical growth during my internship program.</p>
+        </div>
+    </section>
+
+    <section id="about" class="tab-content">
+        <h2>About Me</h2>
+        <h3>Skills Summary</h3>
+        <ul>
+            <li><strong>Technical:</strong> [e.g., Java, Python, SQL, Networking]</li>
+            <li><strong>Soft Skills:</strong> Problem-solving, Communication, Time Management</li>
+        </ul>
+        <hr>
+        <h3>Resume / CV</h3>
+        <p>View or download my professional background here:</p>
+        <a href="https://drive.google.com/file/d/1hxsZu61OQ71WdpOLy0V9D1FpqP2ySGUM/view?usp=sharing" class="btn-download">Download PDF Resume</a>
+    </section>
+
+    <section id="internship" class="tab-content">
+        <h2>Internship Details</h2>
+        <div class="sample-card">
+            <h3>Pamantasan ng Lungsod ng Valenzuela - IT Office</h3>
+            <p><strong>Department:</strong> IT Infrastructure / Development</p>
+            <p><strong>Job Description:</strong> IT Support: Network Administration, and Hardware Specialist</p>
+        </div>
+        <h3>Assigned Tasks</h3>
+        <ul>
+            <li>Task 1: System maintenance and troubleshooting.</li>
+            <li>Task 2: Assisted in database migration.</li>
+            <li>Task 3: Maintained and updated hardware inventory records.</li>
+            <li>Task 4: Provided user support and training for new software implementations.</li>
+            <li>Task 5: Documented and reported hardware issues and resolutions.</li>
+            <li>Task 6: Collaborated with colleagues to create a web-application that can improve hardware checking and reliability of the office's systems.</li>
+        </ul>
+    </section>
+
+    <section id="samples" class="tab-content">
+        <h2>Sample Works & Outputs</h2>
+        <p><em>Note: Per company policy, specific internal data has been redacted or described conceptually.</em></p>
+        
+        <div class="sample-card">
+            <h4>System Standardization & Backup Deployment</h4>
+            <p>Developed a specialized backup system for various types of system units and executed large-scale cloning to ensure network-wide workstation compatibility and naming convention alignment.</p>
+            <small>[Link to Project or Screenshot Placeholder]</small>
+        </div>
+
+        <div class="sample-card">
+            <h4>Network Infrastructure & Cabling Project</h4>
+            <p>Managed the physical layout, installation, and crimping of CAT 5 cabling while performing network speed verification to ensure stable connectivity across multiple computer laboratories.</p>
+        </div>
+
+        <div class="sample-card">
+            <h4>Laboratory Technical Documentation & UI Design</h4>
+            <p>Authored standardized software instructional layouts and updated laboratory notice designs to facilitate student-led technical setups and improve facility user experience.</p>
+        </div>
+
+        <div class="sample-card">
+            <h4>Server Room & Facility Optimization</h4>
+            <p>Designed a comprehensive physical layout for the COED Server Room and reorganized Student Lounge kiosks to optimize campus-wide technical resource accessibility.</p>
+        </div>
+
+        <div class="sample-card">
+            <h4>Web Application Development</h4>
+            <p>Along with my colleagues in the IT Office, we developed a web application that improved hardware checking and system reliability for the office's internal operations.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="tab-content">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> johnkennethgalapia@gmail.com</p>
+        <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/john-kenneth-galapia</p>
+        <hr>
+        <form onsubmit="event.preventDefault(); alert('Message sent! (Placeholder)');">
+            <label>Your Name:</label><br>
+            <input type="text" style="width:98%; padding:8px; margin: 10px 0;"><br>
+            <label>Your Email:</label><br>
+            <input type="text" style="width:98%; padding:8px; margin: 10px 0;"><br>
+            <label>Subject:</label><br>
+            <input type="text" style="width:98%; padding:8px; margin: 10px 0;"><br>
+            <label>Message:</label><br>
+            <textarea style="width:98%; padding:8px; margin: 10px 0; resize: vertical; min-height: 20px;" rows="5"></textarea><br>
+            <button type="submit" class="btn-download" style="border:none; cursor:pointer;">Send Message</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2025 John Kenneth A. Galapia - All Rights Reserved.
+</footer>
+
+<script>
+    function showTab(tabId) {
+        // Hide all tabs
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Deactivate all buttons
+        const buttons = document.querySelectorAll('#mainNav button');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Show selected tab
+        document.getElementById(tabId).classList.add('active');
+
+        // Highlight active button
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
